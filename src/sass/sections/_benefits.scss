@@ -1,0 +1,110 @@
+// === Main ===
+.benefits {
+    &__subtitle {
+        margin-top: 16px;
+    }
+    &__items {
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template: minmax(313px , auto) / repeat(3 , minmax(300px , 420px));
+        gap: 50px 20px;
+        margin-top: 32px;
+    }
+    &__item {
+        color: $white;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+        padding: 52px 57px 42px;
+        &:nth-child(1) {
+            background: url("../img/houses/16.jpg") no-repeat center / cover;
+            padding: 52px 95px 42px;
+        }
+        &:nth-child(2) {
+            background: url("../img/houses/15.jpg") no-repeat center / cover;
+        }
+        &:nth-child(3) {
+            background: url("../img/bg/works_bg.jpg") no-repeat center / cover;
+        } 
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+            content: "";
+            background: linear-gradient(180deg, rgba(5, 96, 136, 0.8) 0%, rgba(2, 57, 87, 0.8) 100%);
+        }
+        &-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-title {
+            color: $white;
+            margin-top: 32px;
+        }
+        &-subtitle {
+            margin-top: 16px;
+        }
+    }
+}
+
+// === / Main ===
+
+// === Media ===
+@media (max-width: 1399px) {
+    .benefits {
+        &__item {
+            padding: 52px 37px 42px;
+            &:nth-child(1) {
+                padding: 52px 75px 42px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .benefits {
+        &__item {
+            padding: 52px 20px 42px;
+            &:nth-child(1) {
+                padding: 52px 40px 42px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .benefits {
+        &__items {
+            grid-template-columns: minmax(280px , 420px);
+            justify-content: center;
+        }
+        &__item {
+            padding: 52px 57px 42px;
+            &:nth-child(1) {
+                padding: 52px 95px 42px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .benefits {
+        &__item {
+            padding: 52px 15px 42px;
+            &:nth-child(1) {
+                padding: 52px 35px 42px;
+            }
+        }
+    }
+}
+// === / Media ===

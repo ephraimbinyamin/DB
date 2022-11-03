@@ -1,0 +1,65 @@
+// === Main ===
+.gallery {
+    &__wrapper {
+        display: grid;
+        grid-template: 490px / repeat(auto-fit , minmax(auto , 420px));
+        grid-auto-rows: 490px;
+        justify-content: center;
+        gap: 50px 20px;
+    }
+    &__item {
+        box-shadow: 0 8px 30px rgba(2, 57, 87, 0.15);
+        &-img {
+            max-width: 420px;
+            height: 250px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-info {
+            padding: 25px;
+        }
+        &-subtitle {
+            margin-top: 16px;
+        }
+        &-btn {
+            margin-top: 32px;
+        }
+        &:nth-child(n+7) {
+            display: none;
+        }
+        &.display {
+            display: block;
+        }
+    }
+    &__more {
+        display: block;
+        color: $navy;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 40.8px;
+        background-color: transparent;
+        margin: 100px auto 0;
+        &:hover {
+            color: darken($navy , 10%);
+        }
+    }
+}
+// === / Main ===
+
+// === Media ===
+@media (max-width: 575px) {
+    .gallery {
+        &__item {
+            &-img {
+                height: 225px;
+            }
+        }
+        &__more {
+            margin-top: 70px;
+        }
+    }
+}
+// === / Media ===

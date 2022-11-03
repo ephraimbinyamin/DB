@@ -1,0 +1,51 @@
+// === Main ===
+.partners {
+    margin-top: 150px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        svg {
+            cursor: pointer;
+            path {
+                transition: all 0.2s;
+            }
+            &:hover {
+                path {
+                    fill: $navy;
+                    fill-opacity: 1;
+                }
+            }
+        }
+    }
+}
+// === / Main ===
+
+// === Media ===
+@media (max-width: 991px) {
+    .partners {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .partners {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__item {
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .partners {
+        margin-top: 50px;
+    }
+}
+// === / Media ===

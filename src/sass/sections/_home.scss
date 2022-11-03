@@ -1,0 +1,80 @@
+// === Main ===
+.home {
+    position: relative;
+    z-index: 5;
+    background: url("../img/bg/works_bg.jpg") no-repeat center / cover;
+    padding: 20px 0;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -5;
+        background: linear-gradient(180deg, rgba(5, 96, 136, 0.9) 0%, rgba(2, 57, 87, 0.9) 100%);
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        color: $white;
+        span {
+            font-size: 30px;
+            font-style: italic;
+        }
+    }
+    &__subtitle {
+        color: $white;
+        margin-top: 16px;
+    }
+    &__content {
+        width: 510px;
+    }
+    &__img {
+        max-width: 611px;
+        height: 388px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+// === / Main ===
+
+// === Media ===
+@media (max-width: 1199px) {
+    .home {
+        padding: 50px 0;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__content {
+            order: 2;
+            margin-top: 50px;
+        }
+        &__img {
+            order: 1;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .home {
+        &__content {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .home {
+        &__img {
+            height: 250px;
+        }
+    }
+}
+// === / Media ===

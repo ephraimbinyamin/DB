@@ -1,0 +1,129 @@
+// === Main ===
+.footer {
+    color: $white;
+    font-family: "Roboto";
+    background-color: $navy-dark;
+    padding: 60px 0 75px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__lists {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+    &__list {
+        color: $white;
+        &-title {
+            font-family: "Poppins";
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 40.8px;
+        }
+        &-link {
+            font-size: 16px;
+            line-height: 24px;
+            &:hover {
+                a {
+                    color: darken($white , 15%);
+                }
+            }
+        }
+        li {
+            margin-top: 16px;
+            &:first-child {
+                
+                margin-top: 0;
+            }
+            &:nth-child(2) {
+                margin-top: 32px;
+            }
+        }
+    }
+    &__main {
+        width: 180px;
+        margin-right: 150px;
+        &-address {
+            color: $white;
+            font-family: "Roboto";
+            font-size: 16px;
+            line-height: 24px;
+            margin-top: 16px;
+        }
+        &-btn {
+            margin-top: 32px;
+        }
+    }
+}
+// === / Main ===
+
+// === Media ===
+@media (max-width: 991px) {
+    .footer {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__lists {
+            margin-top: 50px;
+        }
+        &__main {
+            margin-right: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-address {
+                margin-top: 0;
+            }
+            &-btn {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        &__wrapper {
+            align-items: center;
+        }
+        &__lists {
+            max-width: 440px;
+            flex-wrap: wrap;
+        }
+        &__list {
+            width: 150px;
+            &:nth-child(n+3) {
+                margin-top: 50px;
+            }
+        }
+        &__main {
+            flex-direction: column;
+            text-align: center;
+            &-address {
+                margin-top: 16px;
+            }
+            &-btn {
+                margin-top: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .footer  {
+        &__lists {
+            width: 150px;
+        }
+        &__list {
+            text-align: center;
+            &:not(:first-child) {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+// === / Media ===

@@ -1,0 +1,116 @@
+// === Base ===
+@import "base/variables";
+@import "base/mixins";
+// === / Base ===
+
+// === Libs ===
+@import "libs/bootstrap-reboot.min";
+@import "libs/bootstrap.min";
+@import "libs/fonts";
+@import "libs/reset";
+// === / Libs ===
+
+// === Components ===
+@import "components/logo";
+@import "components/button";
+@import "components/title";
+@import "components/subtitle";
+@import "components/navbar";
+// === / Components ===
+
+// === Sections ===
+
+// === Home ===
+@import "sections/header-main";
+@import "sections/company";
+@import "sections/services";
+@import "sections/benefits";
+@import "sections/works";
+@import "sections/partners";
+@import "sections/video-first";
+@import "sections/offer";
+@import "sections/footer";
+@import "sections/copyright";
+// === / Home ===
+
+// === About ===
+@import "sections/header-secondary";
+@import "sections/story";
+@import "sections/home";
+// === / About ===
+
+// === Services ===
+@import "sections/design";
+@import "sections/build";
+// === / Services ===
+
+// === Gallery ===
+@import "sections/gallery";
+// === / Gallery ===
+
+// === Contact ===
+@import "sections/contact";
+@import "sections/social";
+// === / Contact ===
+
+// === Story ===
+@import "sections/quotes";
+@import "sections/james";
+@import "sections/villa";
+// === / Story ===
+
+// === Careers ===
+@import "sections/careers";
+// === / Careers ===
+
+// === News ===
+@import "sections/news";
+@import "sections/houses";
+// === / News ===
+
+// === News ===
+@import "sections/news";
+// === / News ===
+
+// === Process ===
+@import "sections/process";
+@import "sections/video-second";
+@import "sections/process-gallery";
+// === / Process ===
+
+// === / Sections ===
+
+// === Common ===
+.container {
+    display: block !important;
+    max-width: 1300px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+body {
+    position: relative;
+    font-family: "Poppins";
+    color: $font-color-black;
+    font-weight: 400;
+}
+
+.section-outer {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section-padding-top {
+    padding-top: 100px;
+    @media (max-width: 575px) {
+        padding-top: 70px;
+    }
+}
+
+.section-margin-top {
+    margin-top: 100px;
+    @media (max-width: 575px) {
+        margin-top: 70px;
+    }
+}
+// === / Common ===
