@@ -1,0 +1,151 @@
+// === Main ===
+.quotes {
+    &__item {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 416px;
+        padding: 20px 50px 40px 20px;
+        &:hover {
+            .quotes__item {
+                &-text , &-name {
+                    color: $white;
+                }
+                &-bg {
+                    opacity: 1;
+                }
+            }
+        }
+        &-img {
+            width: 102px;
+            height: 102px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-text {
+            font-size: 16px;
+            line-height: 27.2px;
+            margin-top: 32px;
+        }
+        &-name {
+            font-style: italic;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 27.2px;
+            margin-top: 16px;
+        }
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -5;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 0.2s;
+            &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(5, 96, 136, 0.8) 0%, rgba(2, 57, 87, 0.8) 100%);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &__slider {
+        &-1 {
+            display: block;
+        }
+        &-2 {
+            display: none;
+        }
+    }
+}
+
+.carousel-indicators {
+    left: 50%;
+    bottom: -32px;
+    transform: translateX(-50%);
+    margin: 0;
+    height: 12px;
+    [data-bs-target] {
+        margin: 0;
+        border: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background-color: #E7E7E7;
+        &.active {
+            background-color: $navy-dark;
+        }
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+// === / Main ===
+
+// === Media ===
+@media (max-width: 1399px) {
+    .quotes {
+        &__item {
+            width: 370px;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .quotes {
+        &__item {
+            width: 300px;
+            padding-right: 20px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .quotes {
+        &__item {
+            width: 416px;
+        }
+        &__slider {
+            &-1 {
+                display: none;
+            }
+            &-2 {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-indicators {
+        width: 250px;
+        [data-bs-target] {
+            &:not(:last-child) {
+                margin-right: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .quotes {
+        &__item {
+            width: 100%;
+        }
+    }
+}
+// === / Media ===

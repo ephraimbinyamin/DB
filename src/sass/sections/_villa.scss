@@ -1,0 +1,81 @@
+// === Main ===
+.villa {
+    &__img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 420px;
+        height: 260px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__slider {
+        &-1 , &-2 {
+            margin-top: 32px;
+        }
+        &-1 {
+            display: block;
+        }
+        &-2 {
+            display: none;
+        }
+    }
+}
+// === / Main ===
+
+// === Media ===
+@media (max-width: 1399px) {
+    .villa {
+        &__img {
+            width: 370px;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .villa {
+        &__img {
+            width: 300px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .villa {
+        &__img {
+            width: 416px;
+        }
+        &__slider {
+            &-1 {
+                display: none;
+            }
+            &-2 {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-indicators {
+        width: 250px;
+        [data-bs-target] {
+            &:not(:last-child) {
+                margin-right: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .villa {
+        &__img {
+            width: 100%;
+            height: 230px;
+        }
+    }
+}
+// === / Media ===

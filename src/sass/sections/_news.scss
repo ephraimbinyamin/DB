@@ -1,0 +1,98 @@
+// === Main ===
+.news {
+    position: relative;
+    z-index: 5;
+    height: 580px;
+    padding: 72px;
+    margin-top: 230px;
+    background: url("../img/bg/works_bg.jpg") no-repeat center / cover;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -5;
+        background: linear-gradient(180deg, rgba(5, 96, 136, 0.9) 0%, rgba(2, 57, 87, 0.9) 100%);
+    }
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 436px;
+        margin-top: -202px;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 5;
+            background-color: #000;
+            opacity: 0.2;
+        }
+    }
+    &__title {
+        position: absolute;
+        left: 76px;
+        bottom: 52px;
+        z-index: 10;
+    }
+    &__text {
+        position: absolute;
+        right: 78px;
+        bottom: 29px;
+        z-index: 10;
+        width: 342px;
+        height: 81px;
+        color: $white;
+        font-size: 16px;
+        line-height: 27.2px;
+    }
+}
+// === / Main ===
+
+// === Media ===
+@media (max-width: 1199px) {
+    .news {
+        &__title {
+            bottom: 150px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .news {
+        &__title {
+            font-size: 49px;
+            // bottom: 150px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .news {
+        &__title {
+            left: 45px;
+            font-size: 37px;
+            // bottom: 150px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .news {
+        &__title {
+            left: 18px;
+            font-size: 21px;
+        }
+        &__text {
+            right: 20px;
+            width: 150px;
+            font-size: 10px;
+            line-height: 20px;
+        }
+    }
+}
+// === / Media ===

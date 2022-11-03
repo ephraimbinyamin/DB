@@ -1,0 +1,32 @@
+// === Main ===
+.social {
+    &__wrapper {
+        max-width: 538px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 32px auto 0;
+    }
+}
+// === / Main ===
+
+// === Media ===
+@media (max-width: 575px) {
+    .social {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__btn {
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+            a {
+                color: $white;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+// === / Media ===

@@ -1,0 +1,121 @@
+// === Main ===
+.process-gallery {
+    position: relative;
+    &__background {
+        position: absolute;
+        z-index: -5;
+        height: 472px;
+        left: 0;
+        top: -260px;
+        right: 0;
+        bottom: 0;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 5;
+            background: linear-gradient(180deg, rgba(5, 96, 136, 0.9) 0%, rgba(2, 57, 87, 0.9) 100%);
+        }
+    }
+    &__wrapper {
+        margin-top: 120px;
+    }
+    &__title {
+        color: $white;
+    }
+    &__img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 420px;
+        height: 260px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__slider {
+        &-1 , &-2 {
+            margin-top: 32px;
+        }
+        &-1 {
+            display: block;
+        }
+        &-2 {
+            display: none;
+        }
+    }
+    .section-outer {
+        padding: 0;
+    }
+    .col-md-4 {
+        padding: 0;
+    }
+}
+// === / Main ===
+
+// === Media ===
+@media (max-width: 1399px) {
+    .section-outer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .process-gallery {
+        &__img {
+            width: 370px;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .process-gallery {
+        &__img {
+            width: 300px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .process-gallery {
+        &__img {
+            width: 416px;
+        }
+        &__slider {
+            &-1 {
+                display: none;
+            }
+            &-2 {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-indicators {
+        width: 250px;
+        [data-bs-target] {
+            &:not(:last-child) {
+                margin-right: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .process-gallery {
+        &__wrapper {
+            margin-top: 60px;
+        }
+        &__img {
+            width: 100%;
+            height: 230px;
+        }
+    }
+}
+// === / Media ===

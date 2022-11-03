@@ -1,0 +1,99 @@
+// === Main ===
+.services {
+    &__subtitle {
+        margin: 16px auto 0;
+    }
+    &__items {
+        display: grid;
+        grid-template: minmax(240px , auto) / repeat(auto-fit , 310px);
+        justify-content: center;
+        gap: 20px;
+        margin-top: 32px;
+    }
+    &__item {
+        position: relative;
+        width: 310px;
+        padding: 20px 25px 20px 40px;
+        &:hover {
+            .services__item {
+                &-icon {
+                    path {
+                        fill: $white;
+                    }
+                }
+                &-title {
+                    color: $white;
+                }
+                &-subtitle {
+                    color: $white;
+                }
+                &-bg {
+                    opacity: 1;
+                }
+            }
+        }
+        &-icon {
+            width: 56px;
+            height: 56px;
+            svg {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                path {
+                    transition: all 0.2s;
+                }
+            }
+        }
+        &-title {
+            margin-top: 16px;
+            transition: all 0.2s;
+        }
+        &-subtitle {
+            margin-top: 16px;
+            transition: all 0.2s;
+        }
+        &-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -5;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 0.2s;
+            &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(5, 96, 136, 0.8) 0%, rgba(2, 57, 87, 0.8) 100%);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+// === / Main ===
+
+// === Media ===
+@media (max-width: 1399px) {
+    .services {
+        &__items {
+            grid-template: minmax(240px , auto) / repeat(2 , 310px);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .services {
+        &__items {
+            grid-template-columns: 310px;
+        }
+    }
+}
+// === / Media ===

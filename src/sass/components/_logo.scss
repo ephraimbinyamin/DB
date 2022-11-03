@@ -1,0 +1,13 @@
+// === Logo ===
+.logo {
+    display: block;
+    color: $white;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 66px;
+    line-height: 77px;
+    &:hover {
+        color: $white;
+    }
+}
+// === / Logo ===
