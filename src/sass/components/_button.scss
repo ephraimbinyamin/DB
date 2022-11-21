@@ -38,3 +38,22 @@
     }
 }
 // === / Button ===
+
+// === Media ===
+@media (max-width: 767px) {
+    .btn {
+        &:hover {
+            color: $white;
+            &:before {
+                opacity: 0;
+            }
+        }
+        &:active {
+            color: $white;
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+}
+// === / Media ===

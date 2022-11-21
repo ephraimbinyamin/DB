@@ -94,6 +94,44 @@
         &__items {
             grid-template-columns: 310px;
         }
+        &__item {
+            &:hover {
+                .services__item {
+                    &-icon {
+                        path {
+                            fill: #434343;
+                        }
+                    }
+                    &-title {
+                        color: $navy;
+                    }
+                    &-subtitle {
+                        color: #434343;
+                    }
+                    &-bg {
+                        opacity: 0;
+                    }
+                }
+            }
+            &:active {
+                .services__item {
+                    &-icon {
+                        path {
+                            fill: $white;
+                        }
+                    }
+                    &-title {
+                        color: $white;
+                    }
+                    &-subtitle {
+                        color: $white;
+                    }
+                    &-bg {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
     }
 }
 // === / Media ===

@@ -50,6 +50,19 @@
 // === / Main ===
 
 // === Media ===
+@media (max-width: 767px) {
+    .gallery {
+        &__more {
+            &:hover {
+                color: $navy;
+            }
+            &:active {
+                color: darken($navy , 10%);
+            }
+        }
+    }
+}
+
 @media (max-width: 575px) {
     .gallery {
         &__item {
