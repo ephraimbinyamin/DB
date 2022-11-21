@@ -50,6 +50,19 @@
 // === / Main ===
 
 // === Media ===
+@media (max-width: 767px) {
+    .houses {
+        &__more {
+            &:hover {
+                color: $navy;
+            }
+            &:active {
+                color: darken($navy , 10%);
+            }
+        }
+    }
+}
+
 @media (max-width: 575px) {
     .houses {
         &__item {

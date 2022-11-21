@@ -61,6 +61,19 @@
 // === / Main ===
 
 // === Media ===
+@media (max-width: 767px) {
+    .careers {
+        &__more {
+            &:hover {
+                color: $navy;
+            }
+            &:active {
+                color: darken($navy , 10%);
+            }
+        }
+    }
+}
+
 @media (max-width: 575px) {
     .careers {
         &__item {

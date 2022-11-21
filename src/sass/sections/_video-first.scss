@@ -62,6 +62,21 @@
 // === / Main ===
 
 // === Media ===
+@media (max-width: 767px) {
+    .video-first {
+        &__preview {
+            &-play {
+                &:hover {
+                    background-color: $navy;
+                }
+                &:active {
+                    background-color: darken($navy , 5%);
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 575px) {
     .video-first {
         &__preview {

@@ -7,6 +7,8 @@
         align-items: center;
         flex-wrap: wrap;
         margin-top: 50px;
+    }
+    &__item {
         svg {
             cursor: pointer;
             path {
@@ -38,6 +40,20 @@
         &__item {
             &:not(:first-child) {
                 margin-top: 30px;
+            }
+            svg {
+                &:hover {
+                    path {
+                        fill: black;
+                        fill-opacity: 0.3;
+                    }
+                }
+                &:active {
+                    path {
+                        fill: $navy;
+                        fill-opacity: 1;
+                    }
+                }
             }
         }
     }
