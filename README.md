@@ -22,8 +22,17 @@ npm install
 ```
 
 4. Start the project:
+
+Run production build of the project:
+
 ```
-gulp
+npm start
+```
+
+Or run project in development mode that compiles changes to production `dist` folder:
+
+```
+npm run dev
 ```
 
 5. Open browser on URL `http://localhost:3000/`.
@@ -41,4 +50,6 @@ gulp
 | gulp-rename       | v1.4.0    |
 | gulp-imagemin     | v6.2.0    |
 | gulp-htmlmin      | v5.0.1    |
-| browser-sync      | v2.26.12  |
+| express           | v4.18.2   |
+| nodemon           | v2.0.20   |
+| gulp-nodemon      | v2.5.0    |
